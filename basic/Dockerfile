@@ -1,0 +1,6 @@
+FROM hello-world
+ 
+
+ARG IMAGE_VERSION
+
+LABEL version=${IMAGE_VERSION}
