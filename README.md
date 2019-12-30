@@ -47,3 +47,25 @@ with custom tag
     <tag>unstable</tag>
 </buildArgs>
 ```
+
+or tagged with project version
+
+```xml 
+ <tag>${project.version}</tag>
+ ```
+
+use custom dockerfile 
+
+ ```xml
+<contextDirectory>context</contextDirectory>
+<dockerfile>context/sub/Dockerfile</dockerfile>
+
+```
+
+to skip  build docker 
+```xml 
+<configuration>
+    <skip>true</skip>
+</configuration>
+
+```
