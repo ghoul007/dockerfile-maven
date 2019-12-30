@@ -16,18 +16,33 @@
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>default</id>
+                        <id>build</id>
                         <goals>
                             <goal>build</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>tag</id>
+                        <goals>
+                            <goal>tag</goal>
+                        </goals>
+                        <configuration>
+                           <tag>unstable</tag>
+                        </configuration>  
+                    </execution>
                 </executions>
                 <configuration>
                     <repository>ghoul/basic</repository>
+                    <!-- <contextDirectory>context</contextDirectory> -->
+                    <!-- <dockerfile>context/Dockerfile</dockerfile> -->
+                    <!-- <useMavenSettingsForAuth>true</useMavenSettingsForAuth> -->
+                    <!-- <googleCntainerRegistryEnabled>false</googleCntainerRegistryEnabled> -->
+                       <skip>true</skip>
+                    <!-- <tag>stable</tag> -->
                     <buildArgs>
                         <IMAGE_VERSION>0.0.1</IMAGE_VERSION>
                     </buildArgs>
-                </configuration>
+                </configuration>  
             </plugin>
         </plugins>
     </build>
